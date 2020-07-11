@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Code Editor</title>
+        <div id="titlebar">
+			<button id="save">Save</button>
+		</div>
+		<style type="text/css" media="screen">
+          #editor {
+            position: absolute; 
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          }
+        </style>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+	<div id="container"></div>
+       
+    <div class="editorContainer"> 
+       
+        <div id="editor"> </div>
+       </div>
+    <script>require('./renderer.js')</script>
+      <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+      <script src="ext-language_tools.js"></script>
+      <script src="keybinding-vscode.js"></script>	  
+	  <script>
+        ace.require("ace/ext/language_tools");
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/mono_industrial");
+        editor.session.setMode("ace/mode/csharp");
+        editor.session.setMode("ace/mode/c_cpp");
+        editor.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true 
+          });
+      </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "introducing-electron-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Felix Rieseberg <felix@felixrieseberg.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "1.7.5",
+    "electron-packager": "^15.0.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-react": "^7.20.3"
+  },
+  "dependencies": {
+    "monaco-loader": "^0.8.2"
+  }
+}
